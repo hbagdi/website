@@ -220,7 +220,14 @@ of the controller that should implement the class.
 {{< codenew file="service/networking/external-lb.yaml" >}}
 
 IngressClass resources contain an optional parameters field. This can be used to
-reference additional configuration for this class.
+reference additional implementation-specific configuration for this class.
+
+#### Namespace-scoped parameters
+
+{{< feature-state for_k8s_version="v1.21" state="alpha" >}}
+
+`Parameters` field has a `scope` and `namespace` field that can be used to
+reference a namespace-specific resource for configuration of an Ingress class.
 
 ### Deprecated annotation
 
